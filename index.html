@@ -45,6 +45,24 @@
     </section>
 
     <div class="container">
+      <section id="features" class="section features-section">
+        <h2 class="section-title">Features</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <h3 class="feature-title">Innovative Design</h3>
+            <p class="feature-text">Experience a beautiful, modern interface built with the latest design trends and accessible patterns in mind.</p>
+          </div>
+          <div class="feature-card">
+            <h3 class="feature-title">Responsive Layout</h3>
+            <p class="feature-text">Fully optimized for every device, from mobile screens to large desktop monitors.</p>
+          </div>
+          <div class="feature-card">
+            <h3 class="feature-title">Accessible Forms</h3>
+            <p class="feature-text">Ensuring everyone can interact with our content, with proper semantic HTML and screen reader support.</p>
+          </div>
+        </div>
+      </section>
+
       <section id="about" class="section about-section">
         <h2 class="section-title">About Us</h2>
         <div class="about-content">
@@ -92,22 +110,22 @@
         <form id="contact-form" class="contact-form" novalidate>
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" required aria-required="true">
+            <input type="text" id="name" name="name" required aria-required="true" aria-describedby="name-error">
             <div class="error-message" id="name-error"></div>
           </div>
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" required aria-required="true">
+            <input type="email" id="email" name="email" required aria-required="true" aria-describedby="email-error">
             <div class="error-message" id="email-error"></div>
           </div>
           <div class="form-group">
             <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" required aria-required="true">
+            <input type="text" id="subject" name="subject" required aria-required="true" aria-describedby="subject-error">
             <div class="error-message" id="subject-error"></div>
           </div>
           <div class="form-group">
             <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+            <textarea id="message" name="message" rows="5" required aria-required="true" aria-describedby="message-error"></textarea>
             <div class="error-message" id="message-error"></div>
           </div>
           <button type="submit" class="submit-button">Send Message</button>

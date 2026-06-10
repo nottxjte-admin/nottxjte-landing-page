@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const errorDiv = document.getElementById(`${input.id}-error`);
       input.classList.add('invalid');
       input.classList.remove('valid');
+      input.setAttribute('aria-invalid', 'true');
       if (errorDiv) {
         errorDiv.textContent = message;
       }
@@ -27,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const errorDiv = document.getElementById(`${input.id}-error`);
       input.classList.remove('invalid');
       input.classList.add('valid');
+      input.setAttribute('aria-invalid', 'false');
       if (errorDiv) {
         errorDiv.textContent = '';
       }
@@ -86,7 +88,10 @@ document.addEventListener('DOMContentLoaded', () => {
         msgDiv.textContent = 'Thank you! Your message has been sent.';
         msgDiv.classList.add('success');
         contactForm.reset();
-        inputs.forEach(input => input.classList.remove('valid'));
+        inputs.forEach(input => {
+          input.classList.remove('valid');
+          input.removeAttribute('aria-invalid');
+        });
         
         setTimeout(() => {
           msgDiv.textContent = '';
